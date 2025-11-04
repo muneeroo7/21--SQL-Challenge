@@ -1,20 +1,74 @@
-🧠 Day 1 — 21 Days SQL Challenge (Indian Data Club)
-📅 Date: November 3, 2025
-🎯 Challenge: Retrieve all unique hospital services offered in the hospital database.
+🧠 \*\*Day 2 — 21 Days SQL Challenge (Indian Data Club)\*\*
 
-🧾 Queries Practiced:
+📅 \*\*Date:\*\* November 4, 2025
 
--- Challenge Query: List all unique hospital services
-SELECT DISTINCT service 
-FROM services_weekly;
+🎯 \*\*Challenge:\*\* Find all patients admitted to 'Surgery' service with a satisfaction score below 70, showing their patient\_id, name, age, and satisfaction score.
 
--- Additional Practice Queries
-SELECT * 
-FROM patients;
 
-SELECT patient_id, name, age 
-FROM patients;
 
-SELECT * 
-FROM services_weekly 
-LIMIT 10;
+🧾 \*\*Queries Practiced:\*\*
+
+-- 1. Find all patients who are older than 60 years
+
+
+
+```sql
+
+SELECT \* 
+
+FROM patients 
+
+WHERE age > 60;
+
+```
+
+
+
+-- 2. Retrieve all staff members who work in the 'Emergency' service
+
+
+
+```sql
+
+SELECT \* 
+
+FROM staff 
+
+WHERE service = 'Emergency';
+
+```
+
+
+
+-- 3. List all weeks where more than 100 patients requested admission in any service
+
+
+
+```sql
+
+SELECT week 
+
+FROM services\_weekly 
+
+WHERE patients\_admitted > 100;
+
+```
+
+
+
+-- 💪 \*\*Daily Challenge Query\*\*
+
+
+
+```sql
+
+SELECT patient\_id, name, age, satisfaction 
+
+FROM patients 
+
+WHERE service = 'Surgery' AND satisfaction < 70;
+
+```
+
+
+
